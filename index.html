@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Navegador</title>
+</head>
+<body>
+
+    <h1>Clique no botão para ver as informações do navegador</h1>
+    <button onclick="showBrowserInfo()">Mostrar Informações</button>
+
+    <script>
+        function showBrowserInfo() {
+            const userAgent = navigator.userAgent;
+            const platform = navigator.platform;
+            const screenWidth = screen.width;
+            const screenHeight = screen.height;
+            const backgroundColor = window.getComputedStyle(document.body).backgroundColor;
+            const textColor = window.getComputedStyle(document.body).color;
+
+            const info = `
+                Agente do Usuário: ${userAgent}
+                Plataforma: ${platform}
+                Largura da Tela: ${screenWidth}px
+                Altura da Tela: ${screenHeight}px
+                Cor de Fundo: ${backgroundColor}
+                Cor do Texto: ${textColor}
+            `;
+
+            alert(info);
+        }
+    </script>
+
+</body>
+</html>
